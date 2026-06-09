@@ -1,0 +1,17 @@
+<h1>Lista de Filmes</h1>
+
+{{#if logado}}
+  <p>Usuário autenticado</p>
+{{else}}
+  <p>Por favor, faça login.</p>
+{{/if}}
+
+{{#unless admin}}
+  <p>Você não é administrador</p>
+{{/unless}}
+
+<ul>
+  {{#each filmes}}
+    <li>{{nome}} - {{ano}}</li>
+  {{/each}}
+</ul>

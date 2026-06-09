@@ -1,0 +1,17 @@
+<h1>Lista de Vídeos</h1>
+<a href="/videos/cadastrar">Cadastrar Vídeo</a>
+<hr>
+
+<ul>
+  {{#each videos}}
+    <li>
+      <img src="{{urlThumb}}" alt="Thumbnail" width="150"><br>
+      <strong>{{titulo}}</strong> - Criado por: {{criador}}<br>
+      Descrição: {{descricao}}<br>
+      Visualizações: {{visualizacoes}} | Curtidas: {{curtidas}}<br>
+      Hashtag: #{{hashtag}}<br>
+      <a href="{{urlVideo}}">Link do Vídeo</a>
+    </li>
+    <hr>
+  {{/each}}
+</ul>
